@@ -12,25 +12,25 @@ Upon inspecting the data for null and duplicate values, we found that the datase
 We explored the dataset to understand the distribution of fraudulent and non-fraudulent transactions. A graph was plotted to visualize this distribution. We found that fraudulent transactions account for just 0.17% of the total dataset. Additionally, we examined the Time and Amount columns, plotting graphs to determine when most transactions took place and whether there were any outliers in the Amount column.
 ## Feature Engineering:
 Since the Time and Amount columns were deemed unnecessary for modeling, they were removed. A new column, scaled values, was added to represent the scaled Amount feature. For the purpose of model training, the data was split into two variables:
-    • X: The feature matrix containing the PCA components and the scaled Amount.
-    • Y: The target variable, representing the Class.
+- X: The feature matrix containing the PCA components and the scaled Amount.  
+- Y: The target variable, representing the Class.
 ## Model Training:
 We split the dataset into training and testing sets using a 70-30 ratio via the train_test_split() function, with the following parameters:
-    • X: Feature matrix
-    • Y: Target variable
-    • test_size: 0.3 (30% of the data was allocated to the test set)
+- X: Feature matrix  
+- Y: Target variable  
+- test_size: 0.3 (30% of the data was allocated to the test set)
 ## Model Selection:
-We selected two machine learning algorithms for model building:
-    • Decision Tree: A supervised learning algorithm that splits the data into subsets based on feature values to form a tree-like structure of decisions.
-    • Random Forest: An ensemble learning method that combines multiple decision trees to improve accuracy and reduce overfitting.
+We selected two machine learning algorithms for model building:  
+- Decision Tree: A supervised learning algorithm that splits the data into subsets based on feature values to form a tree-like structure of decisions.  
+- Random Forest: An ensemble learning method that combines multiple decision trees to improve accuracy and reduce overfitting.
 We evaluated the performance of each algorithm to determine which one performs better for our dataset.
 ## Model Validation:
 We validated and tested both models using various evaluation metrics, including:
-    • Accuracy Score
-    • Precision Score
-    • Recall Score
-    • F1 Score
-    • Confusion Matrix
+- Accuracy Score  
+- Precision Score
+- Recall Score
+- F1 Score  
+- Confusion Matrix
 Heatmaps were generated for the confusion matrices of both models to visually assess their performance.
 ## Dealing with Imbalanced Data:
 The dataset is highly imbalanced, with fraudulent transactions making up only 0.17% of the total. To address this, we applied the SMOTE (Synthetic Minority Oversampling Technique), which is an oversampling method designed to balance the class distribution by generating synthetic examples of the minority class.
